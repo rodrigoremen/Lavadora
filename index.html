@@ -6,7 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 </html>
-  <body>
+  <body onload="PrenderLedPower()">
     <div class="grid grid-cols-6 mx-auto px-6 pt-24">
       <!-- Boton de encendido -->
       <div class="text-center pt-44">
@@ -69,6 +69,7 @@
       <div class="text-center pt-32 grid">
         <span
           class="inline-flex items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-700"
+          id="bag5"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -88,8 +89,9 @@
           <p class="whitespace-nowrap text-sm">5</p>
         </span>
         <br>
-        <span
+        <span 
           class="inline-flex items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-700"
+          id="bag4"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -111,6 +113,7 @@
         <br>
         <span
           class="inline-flex items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-700"
+          id="bag3"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -132,6 +135,7 @@
         <br>
         <span
           class="inline-flex items-center justify-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-emerald-700"
+          id="bag2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -153,6 +157,7 @@
         <br>
         <span
           class="inline-flex items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-700"
+          id="bag1"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +179,7 @@
         <br>
         <div class="pt-12">
           <button
-          id="NA"
+          id="NA" onclick="nivelAgua()"
             class="pt-6inline-block rounded bg-red-300 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none active:bg-red-500"
           >
             <p class="text-black text-2xl">Nivel de</p>
@@ -184,7 +189,7 @@
       </div>
       <!-- Nivel de lavado -->
       <div class="text-center pt-32 grid">
-        <span
+        <span id="nl3"
           class="inline-flex items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-700"
         >
           <svg
@@ -206,6 +211,7 @@
         </span>
         <br>
         <span
+        id="nl2"
           class="inline-flex items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-700"
         >
           <svg
@@ -227,6 +233,7 @@
         </span>
         <br>
         <span
+        id="nl1"
           class="inline-flex items-center justify-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-emerald-700"
         >
           <svg
@@ -249,7 +256,7 @@
         
         <div class="pt-12">
           <button
-          id="NL"
+          id="NL" onclick="nivelLavado()"
             class="pt-6inline-block rounded bg-red-300 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none active:bg-red-500"
           >
             <p class="text-black text-2xl">Nivel de</p>
@@ -259,7 +266,7 @@
       </div>
       <!-- Tiempo de lavado -->
       <div class="text-center pt-32 grid">
-        <span
+        <span id="tl5"
           class="inline-flex items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-700"
         >
           <svg
@@ -281,6 +288,7 @@
         </span>
         <br>
         <span
+        id="tl4"
           class="inline-flex items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-700"
         >
           <svg
@@ -302,6 +310,7 @@
         </span>
         <br>
         <span
+        id="tl3"
           class="inline-flex items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-700"
         >
           <svg
@@ -323,6 +332,7 @@
         </span>
         <br>
         <span
+        id="tl2"
           class="inline-flex items-center justify-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-emerald-700"
         >
           <svg
@@ -344,6 +354,7 @@
         </span>
         <br>
         <span
+        id="tl1"
           class="inline-flex items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-700"
         >
           <svg
@@ -366,7 +377,7 @@
         <br>
         <div class="pt-12">
           <button
-            id="TL"
+            id="TL" onclick="tiempoLavado()"
             class="pt-6inline-block rounded bg-red-300 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none active:bg-red-500"
           >
             <p class="text-black text-2xl">Tiempo de</p>
@@ -377,6 +388,7 @@
       <!-- Enjuage -->
       <div class="text-center pt-32 grid">
         <span
+        id="enj3"
           class="inline-flex items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-700"
         >
           <svg
@@ -398,6 +410,7 @@
         </span>
         <br>
         <span
+        id="enj2"
           class="inline-flex items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-700"
         >
           <svg
@@ -419,6 +432,7 @@
         </span>
         <br>
         <span
+        id="enj1"
           class="inline-flex items-center justify-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-emerald-700"
         >
           <svg
@@ -441,17 +455,18 @@
         
         <div class="pt-12">
           <button
-            id="EJ"
+            id="EJ" onclick="enjuage()"
             class="pt-6inline-block rounded bg-red-300 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none  active:bg-red-500"
           >
-            <p class="text-black text-2xl">Enjuage</p>
+            <p class="text-black text-2xl">Enjuague</p>
           </button>
         </div>
       </div>
       <!-- lavar -->
       <div class="text-center pt-52">
         <span
-        class="inline-flex items-center justify-center rounded-full bg-emerald-100 px-2.5 py-1 text-emerald-700"
+        id="bl"
+        class="inline-flex items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-gray-700"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -469,8 +484,7 @@
         </svg>
       </span>
         <div class="pt-24">
-          <button
-            id="lavar"
+          <button onclick="lavar()" id="lv"
             class="pt-6inline-block rounded bg-red-300 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none active:bg-red-500"
           >
             <p class="text-black text-2xl">Lavar</p>
